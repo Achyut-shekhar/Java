@@ -5,7 +5,7 @@ public class banking{
 
     public static void main(String arg[])
     {
-    int i;int choice,flag=0;
+    int i;int choice,flag=0,index=0;
        Scanner scanner=new Scanner(System.in);
        System.out.println("enter the number of account you want to enter");
        int numCustomer=scanner.nextInt();
@@ -32,10 +32,10 @@ public class banking{
     System.out.println("enter the customer id for transaction");
     int idGet=scanner.nextInt();
     for(i=0;i<numCustomer;i++)
-    {
+    { flag=0;
     if(accounts[i].getId()==idGet)
     flag=1;
-    break;
+    index=i;
     }
     scanner.nextLine();
     if(flag==1)
@@ -46,18 +46,19 @@ public class banking{
     
     if(choice==1)
     {
-      accounts[i].CheckBalance();
+      accounts[index].CheckBalance();
     }
     else if(choice==2)
     {
-      accounts[i].deposit();
+      accounts[index].deposit();
     }
     else
     {
-       accounts[i].withdraw();
+       accounts[index].withdraw();
     }
     }else
-    break;
+    { System.out.println("the id is not found");
+    break;}
      }  while(choice!=0);
     }
 }
