@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class School {
+public class school {
 
     public static void main(String[] args) {
         int i, choice, flag = 0, index = 0;
@@ -39,6 +39,7 @@ public class School {
                     System.out.println("Input the " + j + " marks:");
                     int marks = scanner.nextInt();
                     accounts[i].addmarks(marks);
+                    scanner.nextLine();
                 }
                 
                 accounts[i].totalmarks();
@@ -71,7 +72,6 @@ class students {
     void totalmarks() {
         System.out.println("Total marks for " + name + " is: " + marks);
     }
-
     void grade() {
         if (marks >= 300) {
             System.out.println("Grade is: A");

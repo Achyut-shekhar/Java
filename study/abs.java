@@ -18,6 +18,5 @@ public class abs {
   public static void main(String[] args) {
     Dog dog = new Dog();
     dog.makeSound();
-    dog.sleep();
-  }
+    dog.sleep(); }
 }
