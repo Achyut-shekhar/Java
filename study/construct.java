@@ -1,6 +1,7 @@
 import java.util.*;
 
 class a {
+  private int a;
   public a()
   {
   System.out.println("enterd a class");
@@ -37,4 +38,6 @@ class construct{
     obj.show();
   }
 
+
+  
 }
