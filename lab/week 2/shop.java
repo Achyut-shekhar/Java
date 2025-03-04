@@ -29,12 +29,12 @@ public class shop {
                     break; 
                 }
             }
-
+ 
             if (flag == 1) {
                 do {
                     System.out.println("Menu: \n1 - Mobile (500)\n2 - Laptop (250)\n3 - Headphone (100)\n4 - Total Bill\n0 - Exit");
                     choice = scanner.nextInt();
-                    scanner.nextLine(); 
+                      scanner.nextLine(); 
 
                     if (choice == 1) {
                         System.out.println("Enter the quantity:");

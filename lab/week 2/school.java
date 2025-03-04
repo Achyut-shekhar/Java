@@ -49,7 +49,7 @@ public class school {
             }
         } while (true);
 
-        
+
     }
 }
 

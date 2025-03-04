@@ -3,20 +3,28 @@ class bank{
   public static void main(String[] args){
   int numAccounts=Integer.parseInt(args[0]);
   System.out.println(numAccounts);
+
   Scanner scanner=new Scanner(System.in);
+
   accounts[] accounts=new accounts[numAccounts];
+
   for(int i=0;i<numAccounts;i++){
    System.out.println("Enter the name of account holder "+(i+1)+":");
     String nameGet=scanner.nextLine();
+
     System.out.println("Enter the id of account holder "+(i+1)+":");
     int idGet=scanner.nextInt();
+
     System.out.println("Enter the principal amount of account holder "+(i+1)+":");
     int principalAmtGet=scanner.nextInt();  
+
     System.out.println("Enter the rate of interest of account holder "+(i+1)+":");
     int ROI=scanner.nextInt();
+
     System.out.println("Enter the year time of account holder "+(i+1)+":");
     int time=scanner.nextInt();
     scanner.nextLine();
+    
     accounts[i]=new accounts(nameGet,idGet,principalAmtGet,ROI,time);
   }
   do{
