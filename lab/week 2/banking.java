@@ -1,8 +1,6 @@
 import java.util.*;
 
 public class banking{
-
-
     public static void main(String arg[])
     {
     int i;int choice,flag=0,index=0;
