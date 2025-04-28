@@ -12,7 +12,7 @@ class MyCalculator {
 }
 
 public class Exceptionhandle {
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         Scanner sc = new Scanner(System.in);
         MyCalculator myCalculator = new MyCalculator();
         while (true) {
