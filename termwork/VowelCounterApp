@@ -1,0 +1,101 @@
+import javax.swing.*;             
+import java.awt.*;                
+import java.awt.event.*;          
+
+
+public class VowelCounterApp extends JFrame implements ActionListener {
+
+    
+    private JTextField textFieldInput, textFieldOutput;   
+    private JButton countButton, resetButton, exitButton; 
+
+
+    public VowelCounterApp() {
+       
+        setTitle("Vowel Counter");
+
+       
+        setSize(500, 200);
+
+      
+        setLayout(new GridLayout(4, 2, 10, 10));
+
+      
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        
+        JLabel labelInput = new JLabel("Enter a string:");
+        JLabel labelOutput = new JLabel("Number of vowels:");
+
+       
+        textFieldInput = new JTextField();         
+        textFieldOutput = new JTextField();        
+        textFieldOutput.setEditable(false);        
+
+        
+        countButton = new JButton("Count Vowel"); 
+        resetButton = new JButton("Reset");        
+        exitButton = new JButton("Exit");          
+
+      
+        add(labelInput);       
+        add(textFieldInput);   
+
+        add(labelOutput);      
+        add(textFieldOutput);  
+
+        add(countButton);    
+        add(resetButton);      
+        add(exitButton);       
+        add(new JLabel());     
+
+       
+        countButton.addActionListener(this);
+        resetButton.addActionListener(this);
+        exitButton.addActionListener(this);
+
+       
+        setVisible(true);
+    }
+
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
+        if (e.getSource() == countButton) {
+            String input = textFieldInput.getText();         
+            int count = countVowels(input);                  
+            textFieldOutput.setText(Integer.toString(count)); 
+        }
+       
+        else if (e.getSource() == resetButton) {
+            textFieldInput.setText("");   
+            textFieldOutput.setText("");  
+        }
+       
+        else if (e.getSource() == exitButton) {
+            System.exit(0);           
+        }
+    }
+
+    
+    private int countVowels(String input) {
+        int count = 0;
+        String vowels = "aeiouAEIOU";   
+
+        
+        for (char ch : input.toCharArray()) {
+            if (vowels.indexOf(ch) != -1) {  
+                count++;                     
+            }
+        }
+
+        return count;
+    }
+
+    
+    public static void main(String[] args) {
+        
+        new VowelCounterApp();
+    }
+}
