@@ -1,8 +1,8 @@
 import java.util.*;
 
-class UncheckedException extends RuntimeException
+class uncheckedException extends RuntimeException
 {
-   UncheckedException()
+   uncheckedException()
    {
       super();
    }
@@ -11,7 +11,7 @@ class UncheckedException extends RuntimeException
 class first {
   static void method()
    {
-      throw new UncheckedException();
+      throw new uncheckedException();
    }
 }
 
@@ -22,7 +22,7 @@ class second extends first
       try{
       method();
       }
-      catch(UncheckedException e)
+      catch(uncheckedException e)
       {
          System.out.println("Exception");
       }
